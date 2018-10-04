@@ -32,12 +32,3 @@ export function getCurrentWeather(city) {
     return currentWeatherData.data;
   });
 }
-
-export function getForcast(city) {
-  const queryStringData = getQueryStringData(city);
-  const url = prepUrl("forecast/daily", queryStringData);
-
-  return axios.get(url).then(function(forecastData) {
-    return forecastData.data;
-  });
-}

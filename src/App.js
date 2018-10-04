@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { getCurrentWeather, getForcast } from "./utils/api";
+import { getCurrentWeather } from "./utils/api";
 
 class App extends Component {
   render() {
@@ -11,7 +11,7 @@ class App extends Component {
           }}
           className="btn btn-primary"
         >
-          Click
+          Get Current Weather
         </button>
       </div>
     );
