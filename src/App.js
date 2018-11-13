@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Weather from "./components/Weather";
+import WeatherContainer from "./containers/WeatherContainer";
 
 class App extends Component {
   render() {
@@ -14,7 +14,8 @@ class App extends Component {
       //     Get Current Weather
       //   </button>
       // </div>
-      <Weather city="St. George" />
+
+      <WeatherContainer />
     );
   }
 }
