@@ -1,8 +1,8 @@
-import { createStore, applyMiddleware, compose } from "redux";
-import thunk from "redux-thunk";
-import rootReducer from "../reducers";
+import { createStore, applyMiddleware, compose } from 'redux'
+import thunk from 'redux-thunk'
+import rootReducer from '../reducers'
 
-const middleware = [thunk];
+const middleware = [thunk]
 
 export default createStore(
   rootReducer,
@@ -10,4 +10,4 @@ export default createStore(
     applyMiddleware(...middleware),
     global.devToolsExtension ? global.devToolsExtension() : fct => fct
   )
-);
+)

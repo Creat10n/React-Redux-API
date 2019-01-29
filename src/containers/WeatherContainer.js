@@ -1,27 +1,32 @@
-import { connect } from "react-redux";
-import * as actions from "../actions";
+import { connect } from 'react-redux'
+import * as actions from '../actions'
 
-import Weather from "../components/Weather";
+import Weather from '../components/Weather'
 
 const mapStateToProps = state => {
   return {
-    cityName: state.weather.cityName,
-    clouds: state.weather.clouds
-  };
-};
+    name: state.weather.name,
+    longtitude: state.weather.longtitude,
+    latitude: state.weather.latitude,
+    temp: state.weather.temp,
+    pressure: state.weather.pressure,
+    humidity: state.weather.humidity,
+    clouds: state.weather.clouds,
+  }
+}
 
 const mapDispatchToProps = dispatch => {
   return {
     handleInput: event => {
-      dispatch(actions.handleInput(event));
+      dispatch(actions.handleInput(event))
     },
-    handleCurrentWeather: event => {
-      dispatch(actions.handleCurrentWeather(event));
+    getCurrentWeather: name => {
+      dispatch(actions.getCurrentWeather(name))
     }
-  };
-};
+  }
+}
 
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(Weather);
+)(Weather)
